@@ -12,6 +12,10 @@
 */
 
 Route::get('/', 'WelcomeController@index');
+Route::get('/intro', 'ViewPageController@to_intro');
+
+
+
 
 Route::get('home', 'HomeController@index');
 
