@@ -12,5 +12,10 @@ class ViewPageController extends Controller {
 		return view('intro');
 	}
 
+	public function to_index()
+	{
+		return view('mainpages.index');
+	}
+
 
 }

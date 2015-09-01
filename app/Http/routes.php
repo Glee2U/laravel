@@ -13,7 +13,7 @@
 
 Route::get('/', 'WelcomeController@index');
 Route::get('/intro', 'ViewPageController@to_intro');
-
+Route::get('/index', 'ViewPageController@to_index');
 
 
 
