@@ -1,4 +1,8 @@
-@extends('app')
+@extends('layouts.layout')
+
+@section('title')
+注册
+@endsection
 
 @section('content')
 <div class="container-fluid">

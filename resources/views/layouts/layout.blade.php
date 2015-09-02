@@ -5,13 +5,13 @@
   <title>@yield('title')</title>
   <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <link rel="stylesheet" href="js/layout/jPlayer/jplayer.flat.css" type="text/css" />
-  <link rel="stylesheet" href="css/layout/bootstrap.css" type="text/css" />
-  <link rel="stylesheet" href="css/layout/animate.css" type="text/css" />
-  <link rel="stylesheet" href="css/layout/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/layout/simple-line-icons.css" type="text/css" />
-  <link rel="stylesheet" href="css/layout/font.css" type="text/css" />
-  <link rel="stylesheet" href="css/layout/app.css" type="text/css" />  
+  <link rel="stylesheet" href="{{asset('js/layout/jPlayer/jplayer.flat.css')}}" type="text/css" />
+  <link rel="stylesheet" href="{{asset('css/layout/bootstrap.css')}}" type="text/css" />
+  <link rel="stylesheet" href="{{asset('css/layout/animate.css')}}" type="text/css" />
+  <link rel="stylesheet" href="{{asset('css/layout/font-awesome.min.css')}}" type="text/css" />
+  <link rel="stylesheet" href="{{asset('css/layout/simple-line-icons.css')}}" type="text/css" />
+  <link rel="stylesheet" href="{{asset('css/layout/font.css')}}" type="text/css" />
+  <link rel="stylesheet" href="{{asset('css/layout/app.css')}}" type="text/css" />  
     @yield('link')
     <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
@@ -28,7 +28,7 @@
         </a>
         <a href="index.html" class="navbar-brand text-lt">
           <i class="icon-earphones"></i>
-          <img src="images/layout/logo.png" alt="." class="hide">
+          <img src="{{asset('images/layout/logo.png')}}" alt="." class="hide">
           <span class="hidden-nav-xs m-l-sm">Musik</span>
         </a>
         <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
@@ -67,7 +67,7 @@
                 <div class="list-group list-group-alt">
                   <a href="#" class="media list-group-item">
                     <span class="pull-left thumb-sm">
-                      <img src="images/layout/a0.png" alt="..." class="img-circle">
+                      <img src="{{asset('images/layout/a0.png')}}" alt="..." class="img-circle">
                     </span>
                     <span class="media-body block m-b-none">
                       Use awesome animate.css<br>
@@ -91,7 +91,7 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
               <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                <img src="images/layout/a0.png" alt="...">
+                <img src="{{asset('images/layout/a0.png')}}" alt="...">
               </span>
               John.Smith <b class="caret"></b>
             </a>
@@ -419,26 +419,7 @@
                       </ul>
                     </li>
                   </ul>
-                  <ul class="nav text-sm">
-                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-                      <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
-                      Playlist
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="icon-music-tone icon"></i>
-                        <span>Hip-Pop</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="icon-playlist icon text-success-lter"></i>
-                        <b class="badge bg-success dker pull-right">9</b>
-                        <span>Jazz</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+                  
                 <!-- / nav -->
               </div>
             </section>
@@ -448,7 +429,7 @@
                   <div class="dropdown dropup wrapper-sm clearfix">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <span class="thumb-sm avatar pull-left m-l-xs">                        
-                        <img src="images/layout/a3.png" class="dker" alt="...">
+                        <img src="{{asset('images/layout/a3.png')}}" class="dker" alt="...">
                         <i class="on b-black"></i>
                       </span>
                       <span class="hidden-nav-xs clear">
@@ -497,16 +478,16 @@
       </section>
     </section>    
   </section>
-  <script src="js/layout/jquery.min.js"></script>
+  <script src="{{asset('js/layout/jquery.min.js')}}"></script>
   <!-- Bootstrap -->
-  <script src="js/layout/bootstrap.js"></script>
+  <script src="{{asset('js/layout/bootstrap.js')}}"></script>
   <!-- App -->
-  <script src="js/layout/app.js"></script>  
-  <script src="js/layout/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="js/layout/app.plugin.js"></script>
-  <script type="text/javascript" src="js/layout/jPlayer/jquery.jplayer.min.js"></script>
-  <script type="text/javascript" src="js/layout/jPlayer/add-on/jplayer.playlist.min.js"></script>
-  <script type="text/javascript" src="js/layout/jPlayer/demo.js"></script>
+  <script src="{{asset('js/layout/app.js')}}"></script>  
+  <script src="{{asset('js/layout/slimscroll/jquery.slimscroll.min.js')}}"></script>
+    <script src="{{asset('js/layout/app.plugin.js')}}"></script>
+  <script type="text/javascript" src="{{asset('js/layout/jPlayer/jquery.jplayer.min.js')}}"></script>
+  <script type="text/javascript" src="{{asset('js/layout/jPlayer/add-on/jplayer.playlist.min.js')}}"></script>
+
    @yield('script')
 </body>
 </html>

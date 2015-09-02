@@ -14,7 +14,7 @@
 Route::get('/', 'WelcomeController@index');
 Route::get('/intro', 'ViewPageController@to_intro');
 Route::get('/index', 'ViewPageController@to_index');
-
+Route::get('/lesson', 'ViewPageController@to_lesson');
 
 
 Route::get('home', 'HomeController@index');

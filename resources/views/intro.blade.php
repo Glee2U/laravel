@@ -24,7 +24,7 @@
 						<ul>
 							
 							
-							<li><a href="index.html">主页</a></li>
+							<li><a href="/index">主页</a></li>
 							<li><a href="/auth/register" class="button special ">注册</a></li>
 						</ul>
 					</nav>

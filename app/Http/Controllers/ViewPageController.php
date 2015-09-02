@@ -18,4 +18,10 @@ class ViewPageController extends Controller {
 	}
 
 
+	public function to_lesson()
+	{
+		return view('mainpages.content');
+	}
+
+
 }
