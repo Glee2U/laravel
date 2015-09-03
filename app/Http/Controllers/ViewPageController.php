@@ -22,6 +22,10 @@ class ViewPageController extends Controller {
 	{
 		return view('mainpages.content');
 	}
+	public function to_profile()
+	{
+		return view('mainpages.profile');
+	}
 
 
 }
