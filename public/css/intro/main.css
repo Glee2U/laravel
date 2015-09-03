@@ -2027,10 +2027,10 @@
 		}
 
 		body.landing:before {
-			-moz-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
-			-webkit-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
-			-ms-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
-			animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
+			-moz-animation: spinner-show 0.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
+			-webkit-animation: spinner-show 0.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
+			-ms-animation: spinner-show 0.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
+			animation: spinner-show 0.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
 			-moz-transform-origin: 50% 50%;
 			-webkit-transform-origin: 50% 50%;
 			-ms-transform-origin: 50% 50%;
@@ -2053,10 +2053,10 @@
 		}
 
 		body.landing:after {
-			-moz-animation: overlay-hide 1.5s ease-in forwards !important;
-			-webkit-animation: overlay-hide 1.5s ease-in forwards !important;
-			-ms-animation: overlay-hide 1.5s ease-in forwards !important;
-			animation: overlay-hide 1.5s ease-in forwards !important;
+			-moz-animation: overlay-hide 0.5s ease-in forwards !important;
+			-webkit-animation: overlay-hide 0.5s ease-in forwards !important;
+			-ms-animation: overlay-hide 0.5s ease-in forwards !important;
+			animation: overlay-hide 0.5s ease-in forwards !important;
 			background: #1c1d26;
 			content: '';
 			display: block;
@@ -2069,11 +2069,11 @@
 			z-index: -1;
 		}
 
-		body.landing.is-loading:before {
-			-moz-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
-			-webkit-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
-			-ms-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
-			animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
+	　	body.landing.is-loading:before {
+			-moz-animation: spinner-show 0.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
+			-webkit-animation: spinner-show 0.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
+			-ms-animation: spinner-show 0.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
+			animation: spinner-show 0.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
 			z-index: 100001;
 		}
 
@@ -2960,31 +2960,33 @@
 			-webkit-transform: translate(0,0);
 			-ms-transform: translate(0,0);
 			transform: translate(0,0);
-			-moz-transition: -moz-transform 1s ease, opacity 1s ease;
-			-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
-			-ms-transition: -ms-transform 1s ease, opacity 1s ease;
-			transition: transform 1s ease, opacity 1s ease;
+			-moz-transition: -moz-transform 0.2s ease, opacity 0.1s ease;
+			-webkit-transition: -webkit-transform 0.2s ease, opacity 0.1s ease;
+			-ms-transition: -ms-transform 0.2s ease, opacity 0.1s ease;
+			transition: transform 0.2s ease, opacity 0.1s ease;
 			background: rgba(23, 24, 32, 0.95);
 			border-style: solid;
 			opacity: 1;
 			position: absolute;
 		}
 
-		.spotlight .goto-next {
+		/*.spotlight .goto-next {
 			-moz-transform: translate(0,0);
 			-webkit-transform: translate(0,0);
 			-ms-transform: translate(0,0);
 			transform: translate(0,0);
-			-moz-transition: -moz-transform 0.75s ease, opacity 1s ease-in;
-			-webkit-transition: -webkit-transform 0.75s ease, opacity 1s ease-in;
-			-ms-transition: -ms-transform 0.75s ease, opacity 1s ease-in;
-			transition: transform 0.75s ease, opacity 1s ease-in;
-			-moz-transition-delay: 0.5s;
+		
+		
+         	-moz-transition: -moz-transform 0.02s ease, opacity 0.01s ease-in;
+			-webkit-transition: -webkit-transform 0.02s ease, opacity 0.01s ease-in;
+			-ms-transition: -ms-transform 0.02s ease, opacity 0.01s ease-in;
+			transition: transform 0.02s ease, opacity 0.01s ease-in;
+	     /*	-moz-transition-delay: 0.5s;
 			-webkit-transition-delay: 0.5s;
 			-ms-transition-delay: 0.5s;
 			transition-delay: 0.5s;
 			opacity: 1;
-		}
+		}*/
 
 		.spotlight.top .content, .spotlight.bottom .content {
 			left: 0;
@@ -3144,10 +3146,10 @@
 			-webkit-transform: translate(0,0);
 			-ms-transform: translate(0,0);
 			transform: translate(0,0);
-			-moz-transition: -moz-transform 1s ease, opacity 1s ease;
-			-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
-			-ms-transition: -ms-transform 1s ease, opacity 1s ease;
-			transition: transform 1s ease, opacity 1s ease;
+			-moz-transition: -moz-transform 0.3s ease, opacity 0.5s ease;
+			-webkit-transition: -webkit-transform 0.3s ease, opacity 0.5s ease;
+			-ms-transition: -ms-transform 0.3s ease, opacity 0.5s ease;
+			transition: transform 0.3s ease, opacity 0.5s ease;
 			opacity: 1;
 		}
 
@@ -3164,10 +3166,10 @@
 			-webkit-transform: translate(0,0);
 			-ms-transform: translate(0,0);
 			transform: translate(0,0);
-			-moz-transition: -moz-transform 1s ease, opacity 1s ease;
-			-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
-			-ms-transition: -ms-transform 1s ease, opacity 1s ease;
-			transition: transform 1s ease, opacity 1s ease;
+			-moz-transition: -moz-transform 0.3s ease, opacity 0.3s ease;
+			-webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
+			-ms-transition: -ms-transform 0.3s ease, opacity 0.3s ease;
+			transition: transform 0.3s ease, opacity 0.3s ease;
 			opacity: 1;
 		}
 
@@ -3179,13 +3181,13 @@
 			opacity: 0;
 		}
 
-		.wrapper.fade > .container {
-			-moz-transition: opacity 1s ease;
-			-webkit-transition: opacity 1s ease;
-			-ms-transition: opacity 1s ease;
-			transition: opacity 1s ease;
+		/*.wrapper.fade > .container {
+			-moz-transition: opacity 0.5s ease;
+			-webkit-transition: opacity 0.5s ease;
+			-ms-transition: opacity 0.5s ease;
+			transition: opacity 0.5s ease;
 			opacity: 1;
-		}
+		}*/
 
 		.wrapper.fade.inactive > .container {
 			opacity: 0;
@@ -3813,10 +3815,10 @@
 				-webkit-transform: translateX(-275px);
 				-ms-transform: translateX(-275px);
 				transform: translateX(-275px);
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
+				-moz-transition: -moz-transform 0.05s ease;
+				-webkit-transition: -webkit-transform 0.05s ease;
+				-ms-transition: -ms-transform 0.05s ease;
+				transition: transform 0.05s ease;
 				display: block;
 				height: 100%;
 				left: 0;
