@@ -22,7 +22,7 @@
 <body class="">
   <section class="vbox">
     <header class="bg-white-only header header-md navbar navbar-fixed-top-xs">
-      <div class="navbar-header aside bg-info dk">
+      <div class="navbar-header aside nav-xs bg-info dk">
         <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
           <i class="icon-list"></i>
         </a>
@@ -124,7 +124,7 @@
     <section>
       <section class="hbox stretch">
         <!-- .aside -->
-        <aside class="bg-black dk aside hidden-print" id="nav">          
+        <aside class="bg-black dk aside nav-xs hidden-print" id="nav">          
           <section class="vbox">
             <section class="w-f-md scrollable">
               <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="10px" data-railOpacity="0.2">
@@ -140,13 +140,13 @@
                     <li>
                       <a href="index.html">
                         <i class="icon-disc icon text-success"></i>
-                        <span class="font-bold">What's new</span>
+                        <span class="font-bold">主页</span>
                       </a>
                     </li>
                     <li>
                       <a href="genres.html">
                         <i class="icon-music-tone-alt icon text-info"></i>
-                        <span class="font-bold">Genres</span>
+                        <span class="font-bold">个人中心</span>
                       </a>
                     </li>
                     <li>
