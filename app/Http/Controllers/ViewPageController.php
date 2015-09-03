@@ -28,4 +28,10 @@ class ViewPageController extends Controller {
 	}
 
 
+	public function to_pay()
+	{
+		return view('mainpages.productpaylist');
+	}
+
+
 }
