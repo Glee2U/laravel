@@ -33,5 +33,9 @@ class ViewPageController extends Controller {
 		return view('mainpages.productpaylist');
 	}
 
+	public function to_course()
+	{
+		return view('mainpages.courselist');
+	}
 
 }

@@ -7,7 +7,7 @@
 
 @section('content')     
 
-         
+            <section class="scrollable wrapper">
               <section class="hbox stretch">
                 <aside class="aside-lg bg-light lter b-r">
                   <section class="vbox">
@@ -233,7 +233,7 @@
                   </section>              
                 </aside>
               </section>
-         
+         </section>
 
 
 

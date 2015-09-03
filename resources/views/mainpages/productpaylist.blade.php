@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-
+   <section class="scrollable wrapper">
 
               <section class="panel panel-default" align="center">              
                 <div class="table-responsive">
@@ -86,6 +86,6 @@
                     </tbody>
                   </table>
                 </div>
-                
+             </section>   
 
 @endsection

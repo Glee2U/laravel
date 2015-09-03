@@ -17,7 +17,7 @@ Route::get('/index', 'ViewPageController@to_index');
 Route::get('/lesson', 'ViewPageController@to_lesson');
 Route::get('/profile', 'ViewPageController@to_profile');
 Route::get('/pay', 'ViewPageController@to_pay');
-
+Route::get('/course', 'ViewPageController@to_course');
 
 Route::get('home', 'HomeController@index');
 

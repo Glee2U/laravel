@@ -10,7 +10,7 @@
   @endsection
 @section('content')     
 
-
+   <section class="scrollable wrapper">
        <div class="row">
                 <div class="col-sm-12">
                    <div class="panel" align="center">
@@ -133,5 +133,5 @@
             
               </div>
 
-
+</section>
               @endsection
