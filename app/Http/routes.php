@@ -18,6 +18,11 @@ Route::get('/lesson', 'ViewPageController@to_lesson');
 Route::get('/profile', 'ViewPageController@to_profile');
 Route::get('/pay', 'ViewPageController@to_pay');
 Route::get('/course', 'ViewPageController@to_course');
+Route::get('/editprofile', 'User\UserController@editprofile');
+ Route::resource('user', 'User\UserController');
+
+
+
 
 Route::get('home', 'HomeController@index');
 
@@ -25,3 +30,16 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
+
+
+Route::get('fileentry', 'FileEntryController@index');
+Route::get('fileentry/get/{filename}', [
+	'as' => 'getentry', 'uses' => 'FileEntryController@get']);
+Route::post('fileentry/add',[ 
+        'as' => 'addentry', 'uses' => 'FileEntryController@add']);
+ 
+ 
+
+ 

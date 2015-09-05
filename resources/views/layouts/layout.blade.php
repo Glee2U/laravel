@@ -27,8 +27,8 @@
           <i class="icon-list"></i>
         </a>
         <a href="/index" class="navbar-brand text-lt">
-          <i class="icon-earphones"></i>
-          <img src="{{asset('images/layout/logo.png')}}" alt="." class="hide">
+          <i class="icon-drop"></i>
+         
           <span class="hidden-nav-xs m-l-sm">OnePenaut</span>
         </a>
         <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
@@ -88,20 +88,35 @@
               </section>
             </section>
           </li>
+@if (Auth::guest())
+                <li><a  href="{{ url('/auth/login') }}">Login</a></li>
+            <li><a   href="{{ url('/auth/register') }}">Register</a></li>
+            @else
+
           <li class="dropdown">
             <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
               <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                <img src="{{asset('images/layout/a0.png')}}" alt="...">
+             
+               
+
+                            @if (Auth::user()->avatar=='')
+                            <img src="{{asset('images/layout/default_avatar.jpg')}}" height="10%" width="10%"/>
+                              @else
+                              <img src="{{route('getentry', Auth::user()->email.'.'.'jpg')}}" height="10%" width="10%" />
+                              @endif
+
+                      
+               
               </span>
-              John.Smith <b class="caret"></b>
+             {{ Auth::user()->name }} <b class="caret"></b>
             </a>
             <ul class="dropdown-menu animated fadeInRight">            
               <li>
                 <span class="arrow top"></span>
-                <a href="#">Settings</a>
+                <a href="/editprofile">编辑</a>
               </li>
               <li>
-                <a href="profile.html">Profile</a>
+                <a href="/profile">个人资料</a>
               </li>
               <li>
                 <a href="#">
@@ -114,10 +129,14 @@
               </li>
               <li class="divider"></li>
               <li>
-                <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
+                <a href="{{ url('/auth/logout') }}"  >Logout</a>
               </li>
             </ul>
           </li>
+@endif
+
+
+
         </ul>
       </div>      
     </header>

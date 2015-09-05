@@ -48,6 +48,11 @@ return [
 			'root'   => storage_path().'/app',
 		],
 
+		'avatar' => [
+			'driver' => 'local',
+			'root'   => storage_path().'/avatar',
+		],		
+
 		's3' => [
 			'driver' => 's3',
 			'key'    => 'your-key',
