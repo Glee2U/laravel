@@ -1,5 +1,5 @@
 <?php namespace App\Http\Controllers;
-
+use App\Course;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -35,7 +35,7 @@ class ViewPageController extends Controller {
 
 	public function to_course()
 	{
-		return view('mainpages.courselist');
+		return view('mainpages.courselist')->withCourses(Course::all());
 	}
 
 }

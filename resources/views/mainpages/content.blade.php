@@ -15,7 +15,7 @@
                 <div class="col-sm-12">
                    <div class="panel" align="center">
                   <br>
-                    <h1 class="m-t-none text-black">Title here</h1>
+                    <h1 class="m-t-none text-black">{{ $course->name }}</h1>
                    <br>
                    </div>
 
@@ -41,16 +41,14 @@
                  
                     <!-- / video player -->
                     <div class="wrapper-lg">
-                      <h2 class="m-t-none text-black">Big Buck Bunny Trailer</h2>
+                      <h2 class="m-t-none text-black">{{ $course->introduction }}</h2>
                       <div class="post-sum">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat. Vestibulum ullamcorper sodales nisi nec condimentum. Mauris convallis mauris at pellentesque volutpat. 
-                        <br><br>
-                        Phasellus at ultricies neque, quis malesuada augue. Donec eleifend condimentum nisl eu consectetur. Integer eleifend, nisl venenatis consequat iaculis, lectus arcu malesuada sem, dapibus porta quam lacus eu neque.</p>
+                        {{ $course->body}}
                       </div>
                       <div class="line b-b"></div>
                       <div class="text-muted">
-                        <i class="fa fa-user icon-muted"></i> by <a href="#" class="m-r-sm">Admin</a>
-                        <i class="fa fa-clock-o icon-muted"></i> Feb 20, 2013
+                        <i class="fa fa-user icon-muted"></i> by <a href="#" class="m-r-sm">{{ $course->author }}</a>
+                        <i class="fa fa-clock-o icon-muted"></i> {{ $course->updated_at }}
                         <a href="#" class="m-l-sm"><i class="fa fa-comment-o icon-muted"></i> 3 comments</a>
                       </div>
                     </div>

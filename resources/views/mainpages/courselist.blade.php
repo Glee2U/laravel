@@ -5,276 +5,52 @@
 @endsection
 
 @section('content')
-<section class="col-xs-3 no-padder" >
-              
-              </section>
+<section class="scrollable padder-lg w-f-md" id="bjax-target">
+             <a href="#" class="pull-right text-muted m-t-lg" data-toggle="class:fa-spin" ><i class="icon-refresh i-lg  inline" id="refresh"></i></a>
+                  <h2 class="font-thin m-b">Discover <span class="musicbar animate inline m-l-sm" style="width:20px;height:20px">
+                    <span class="bar1 a1 bg-primary lter"></span>
+                    <span class="bar2 a2 bg-info lt"></span>
+                    <span class="bar3 a3 bg-success"></span>
+                    <span class="bar4 a4 bg-warning dk"></span>
+                    <span class="bar5 a5 bg-danger dker"></span>
+                  </span></h2>
+                  <div class="row row-sm">
+            
+        
+              @foreach ($courses as $course)
+                    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="item">
+                        <div class="pos-rlt">
+                          <div class="item-overlay opacity r r-2x bg-black">
+                            <div class="text-info padder m-t-sm text-sm">
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star"></i>
+                              <i class="fa fa-star-o text-muted"></i>
+                            </div>
+                            <div class="center text-center m-t-n">
+                              <a href="{{ URL('courses/'.$course->id) }}"><i class="icon-control-play i-2x"></i></a>
+                            </div>
+                            <div class="bottom padder m-b-sm">
+                              <a href="#" class="pull-right">
+                                <i class="fa fa-heart-o"></i>
+                              </a>
+                              <a href="#">
+                                <i class="fa fa-plus-circle"></i>
+                              </a>
+                            </div>
+                          </div>
+                          <a href="{{ URL('courses/'.$course->id) }}"><img src="images/courses/cover/{{ $course->ava_dir}}.jpg" alt="" class="r r-2x img-full"></a>
+                        </div>
+                        <div class="padder-v">
+                          <a href="#" class="text-ellipsis">{{ $course->name }}</a>
+                          <a href="#" class="text-ellipsis text-xs text-muted">{{ $course->author }}</a>
+                        </div>
+                      </div>
+                    </div>
 
-
-   <section class="scrollable wrapper">
-<h1>课程中心</h1>
-              <div class="row row-sm">
-                <div class="col-xs-9 col-sm-4">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <div class="top">
-                        <span class="badge bg-dark m-l-sm m-t-sm">03:20</span>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Tempered Song</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Miaow</a>
-                    </div>
+                  @endforeach
                   </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <div class="top">
-                        <span class="badge bg-dark m-l-sm m-t-sm">02:10</span>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Morbi id neque quam</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Phasellus</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <div class="top">
-                        <span class="badge bg-dark m-l-sm m-t-sm">05:40</span>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Aliquam sollicitudin venenatis ipsum</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Malesuada</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h3 class="font-thin m-b">Video List</h3>
-              <div class="row row-sm">
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Tempered Song</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Miaow</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Morbi id neque quam</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Phasellus</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Aliquam sollicitudin venenatis ipsum</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Malesuada</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Citudin venenatis ipsum ac</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Volutpat</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Vestibulum ullamcorper sodales nisi</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Mauris Qiaos</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Mauris convallis mauris at</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Neque</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Sodales nisi nec condimentum</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Augue</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Nisi nec condimentum</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Miaow</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Phasellus at ultricies nequ</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Volutpat</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Quis malesuada augue</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Feugiat</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Ipsum ac feugiat</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Quam AC</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="item">
-                    <div class="pos-rlt">
-                      <div class="item-overlay opacity r r-2x bg-black">
-                        <div class="center text-center m-t-n">
-                          <a href="/lesson"><i class="fa fa-play-circle i-2x"></i></a>
-                        </div>
-                      </div>
-                      <a href="/lesson"><img src="{{asset('images/layout/m40.jpg')}}" alt="" class="r r-2x img-full"></a>
-                    </div>
-                    <div class="padder-v">
-                      <a href="/lesson" class="text-ellipsis">Ullamcorper sodales nisi nec condimentu</a>
-                      <a href="/lesson" class="text-ellipsis text-xs text-muted">Convallis</a>
-                    </div>
-                  </div>
-                </div>                
-              </div>
-              <ul class="pagination pagination">
-                <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-              </ul>
-    
-</section>
+                  <section>
         @endsection

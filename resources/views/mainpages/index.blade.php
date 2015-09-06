@@ -4,28 +4,46 @@
 
 
 @section('content')
+
+
+
+
+
+
+
+
+
+
+
+          
 <section >
             <section class="hbox stretch  ">
 
 <section class="col-sm-9 " >
-              <div class="row m-t-lg m-b-lg">
-                    <div class="col-sm-6">
-                      <div class="bg-primary wrapper-md r">
-                        <a href="#">
-                          <span class="h4 m-b-xs block"><i class=" icon-user-follow i-lg"></i> Login or Create account</span>
-                          <span class="text-muted">Save and share your playlist with your friends when you log in or create an account.</span>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="bg-black wrapper-md r">
-                        <a href="#">
-                          <span class="h4 m-b-xs block"><i class="icon-cloud-download i-lg"></i> Download our app</span>
-                          <span class="text-muted">Get the apps for desktop and mobile to start listening music at anywhere and anytime.</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+              
+     
+
+<style>
+.vertical { 
+height: 110px;/*元素的高度*/ 
+width: 95%;
+position: absolute; 
+top: 40%;/*元素的顶部边界离父元素的的位置是父元素高度的一半*/ 
+margin-top: -50px;/*设置元素顶边负边距，大小为元素高度的一半*/ 
+
+}
+</style>
+
+
+<div class="input-group vertical" align="center">
+  <h1><i class="icon-drop"></i>OnePenaut</h1>
+  <input type="text" class="form-control" placeholder="输入搜索内容">
+  <br/>  <br/>  <br/>
+<a href="#" class="btn btn-s-md btn-danger">搜索</a>
+</div>
+
+
+
               </section>
 
 <section class="col-sm-3 no-padder lt">
