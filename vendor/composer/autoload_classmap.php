@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'CourseSeeder' => $baseDir . '/database/seeds/CourseSeeder.php',
+    'CreateCommentsTable' => $baseDir . '/database/migrations/2015_09_07_005017_create_comments_table.php',
     'CreateCoursesTable' => $baseDir . '/database/migrations/2015_09_06_121323_create_courses_table.php',
     'CreateFileentriesTable' => $baseDir . '/database/migrations/2015_09_05_063744_create_fileentries_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',

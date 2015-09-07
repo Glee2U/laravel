@@ -186,7 +186,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/course">
+                                            <a href="/courses">
                                                 <i class="icon-list icon text-danger"></i>
 
                                                 <span class="font-bold">课程中心</span>

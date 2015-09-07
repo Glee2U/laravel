@@ -23,33 +23,33 @@
                         <div class="text-center m-b m-t">
                           <a href="/fileentry" class="thumb-lg" style="width:100px; height:100px; border-radius:50%; overflow:hidden;">
 
-                            @if (Auth::user()->avatar=='')
+                            @if ($otheruser->avatar=='')
                             <img src="{{asset('images/layout/default_avatar.jpg')}}" />
                               @else
-                              <img src="{{route('getentry', Auth::user()->email.'.'.'jpg')}}"  />
+                              <img src="{{route('getentry', $otheruser->email.'.'.'jpg')}}"  />
                               @endif
 
                           </a>
                           <div>
-                            <div class="h3 m-t-xs m-b-xs">{{ Auth::user()->name }} </div>
+                            <div class="h3 m-t-xs m-b-xs">{{ $otheruser->name }} </div>
 
-                            <small class="text-muted"><i class="fa fa-map-marker"></i>{{ Auth::user()->position }} </small>
+                            <small class="text-muted"><i class="fa fa-map-marker"></i>{{ $otheruser->position }} </small>
                             <br>
                             <br>
-                            <a class=" icon-wrench" href="/editprofile"><small>修改</small></a>
+                            
                           </div>                
                         </div>
                         <div class="panel wrapper">
                           <div class="row text-center">
                             <div class="col-xs-6">
                               <a href="#">
-                                <span class="m-b-xs h4 block">{{ Auth::user()->followers }} </span>
+                                <span class="m-b-xs h4 block">{{  $otheruser->followers }} </span>
                                 <small class="text-muted">Followers</small>
                               </a>
                             </div>
                             <div class="col-xs-6">
                               <a href="#">
-                                <span class="m-b-xs h4 block">{{ Auth::user()->followings }}</span>
+                                <span class="m-b-xs h4 block">{{ $otheruser->followings }}</span>
                                 <small class="text-muted">Following</small>
                               </a>
                             </div>
@@ -57,7 +57,19 @@
                         </div>
  
 
-                        
+                        <div class="btn-group btn-group-justified m-b">
+                          <a class="btn btn-success btn-rounded" data-toggle="button">
+                            <span class="text">
+                              <i class="fa fa-eye"></i> Follow
+                            </span>
+                            <span class="text-active">
+                              <i class="fa fa-eye"></i> Following
+                            </span>
+                          </a>
+                          <a class="btn btn-dark btn-rounded">
+                            <i class="fa fa-comment-o"></i> Chat
+                          </a>
+                        </div>
                         <div>
                           <small class="text-uc text-xs text-muted">about me</small>
                           <p>Artist</p>
@@ -243,6 +255,7 @@
          </section>
 
 @endif
+
 
 
             @endsection

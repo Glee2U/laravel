@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers\User;
+use App\User;
 use App\Http;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -40,4 +41,12 @@ public function update(Request $request,$email)
     return Redirect::route('/profile');
 
 }
+
+
+
+ public function show($id)
+  {
+  	$otheruser =  User::where('email', $id)->first();
+    return view('mainpages.userprofile')->withOtheruser($otheruser);
+  }
 }

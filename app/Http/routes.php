@@ -27,7 +27,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
 });
 
 Route::get('courses/{id}', 'Course\CourseController@show');
-
+Route::get('user/{id}', 'User\UserController@show');
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
@@ -35,7 +35,7 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-
+Route::post('comment/store', 'CommentsController@store');
 
 
 Route::get('fileentry', 'FileEntryController@index');
